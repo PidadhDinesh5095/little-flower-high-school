@@ -12,6 +12,7 @@ const navLinks = [
   { label: "Achievements", path: "/achievements" },
   { label: "Admissions", path: "/admissions" },
   { label: "Gallery", path: "/gallery" },
+  { label: "Faculty", path: "/faculty" },
   { label: "Contact", path: "/contact" },
 ];
 

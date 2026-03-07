@@ -94,6 +94,7 @@ export default {
         "slide-in-right": "slide-in-right 0.7s ease-out forwards",
         "scale-up": "scale-up 0.5s ease-out forwards",
         "float": "float 3s ease-in-out infinite",
+        "marquee": "marquee 30s linear infinite",
       },
     },
   },
