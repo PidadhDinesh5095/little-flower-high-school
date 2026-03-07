@@ -47,8 +47,8 @@ const Navbar = () => {
         <Link to="/" className="flex items-center gap-3">
           <img src={schoolLogo} alt="Bright Future Academy Logo" className="h-12 w-12 object-contain" />
           <div className={`font-heading font-bold text-lg leading-tight ${textColor}`}>
-            Bright Future<br />
-            <span className="text-secondary text-sm font-subheading font-medium">Academy</span>
+            Little Flower High School<br />
+           
           </div>
         </Link>
 
