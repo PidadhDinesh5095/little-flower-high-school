@@ -1,14 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Layout from "@/components/Layout";
+import HeroSection from "@/components/home/HeroSection";
+import ToppersSection from "@/components/home/ToppersSection";
+import CampusHighlights from "@/components/home/CampusHighlights";
+import LeadershipSection from "@/components/home/LeadershipSection";
+import TimelineSection from "@/components/home/TimelineSection";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
+import StatsSection from "@/components/home/StatsSection";
+import EventsSection from "@/components/home/EventsSection";
+import AdmissionCTA from "@/components/home/AdmissionCTA";
 
-const Index = () => {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
-};
+const Index = () => (
+  <Layout>
+    <HeroSection />
+    <ToppersSection />
+    <CampusHighlights />
+    <LeadershipSection />
+    <TimelineSection />
+    <WhyChooseUs />
+    <StatsSection />
+    <EventsSection />
+    <AdmissionCTA />
+  </Layout>
+);
 
 export default Index;
