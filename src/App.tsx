@@ -11,6 +11,7 @@ import Achievements from "./pages/Achievements";
 import Admissions from "./pages/Admissions";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import Faculty from "./pages/Faculty";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

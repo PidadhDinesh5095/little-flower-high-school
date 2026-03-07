@@ -1,19 +1,29 @@
 import ScrollReveal from "@/components/ScrollReveal";
-import { Trophy } from "lucide-react";
+import { Trophy, Star } from "lucide-react";
+
+import student1 from "@/assets/student-1.jpg";
+import student2 from "@/assets/student-2.jpg";
+import student3 from "@/assets/student-3.jpg";
+import student4 from "@/assets/student-4.jpg";
+import student5 from "@/assets/student-5.jpg";
+import student6 from "@/assets/student-6.jpg";
 
 const toppers = [
-  { name: "Rahul Sharma", marks: "589 / 600", badge: "School Topper" },
-  { name: "Priya Reddy", marks: "582 / 600", badge: "2nd Rank" },
-  { name: "Arjun Patel", marks: "578 / 600", badge: "3rd Rank" },
-  { name: "Sneha Iyer", marks: "575 / 600", badge: "4th Rank" },
-  { name: "Vikram Singh", marks: "571 / 600", badge: "5th Rank" },
-  { name: "Ananya Gupta", marks: "568 / 600", badge: "6th Rank" },
+  { name: "Rahul Sharma", gpa: "10.00", badge: "School Topper", image: student1 },
+  { name: "Priya Reddy", gpa: "9.95", badge: "2nd Rank", image: student2 },
+  { name: "Arjun Patel", gpa: "9.90", badge: "3rd Rank", image: student3 },
+  { name: "Sneha Iyer", gpa: "9.85", badge: "4th Rank", image: student4 },
+  { name: "Vikram Singh", gpa: "9.80", badge: "5th Rank", image: student5 },
+  { name: "Ananya Gupta", gpa: "9.78", badge: "6th Rank", image: student6 },
 ];
 
+// Duplicate for seamless infinite scroll
+const marqueeItems = [...toppers, ...toppers];
+
 const ToppersSection = () => (
-  <section className="section-padding bg-section-light">
-    <div className="container-wide">
-      <ScrollReveal className="text-center mb-16">
+  <section className="section-padding bg-section-light overflow-hidden">
+    <div className="container-wide mb-12">
+      <ScrollReveal className="text-center">
         <p className="text-secondary font-subheading font-semibold text-sm uppercase tracking-widest mb-3">Academic Excellence</p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
           Our Top Achievers
@@ -22,27 +32,43 @@ const ToppersSection = () => (
           Celebrating the outstanding results of our Class X students who have made us proud.
         </p>
       </ScrollReveal>
+    </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {toppers.map((t, i) => (
-          <ScrollReveal key={t.name} delay={i * 100} direction="scale">
-            <div className="glass-card rounded-2xl p-6 hover-lift group cursor-default">
-              <div className="flex items-start justify-between mb-4">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center font-heading font-bold text-primary text-lg">
-                  {t.name.split(" ").map(n => n[0]).join("")}
+    {/* Infinite marquee */}
+    <div className="relative">
+      {/* Fade edges */}
+      <div className="absolute left-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-r from-background to-transparent pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
+
+      <div className="flex animate-marquee hover:[animation-play-state:paused]">
+        {marqueeItems.map((t, i) => (
+          <div
+            key={`${t.name}-${i}`}
+            className="flex-shrink-0 w-72 mx-4"
+          >
+            <div className="glass-card rounded-2xl p-5 hover-lift group cursor-default h-full">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-secondary/30 flex-shrink-0">
+                  <img src={t.image} alt={t.name} className="w-full h-full object-cover" loading="lazy" />
                 </div>
-                {i === 0 && <Trophy className="text-secondary" size={24} />}
+                <div className="min-w-0">
+                  <h3 className="font-subheading font-semibold text-foreground truncate">{t.name}</h3>
+                  <p className="text-muted-foreground text-sm font-body">10th Grade</p>
+                </div>
+                {i % toppers.length === 0 && <Trophy className="text-secondary flex-shrink-0" size={22} />}
               </div>
-              <h3 className="font-subheading font-semibold text-lg text-foreground mb-1">{t.name}</h3>
-              <p className="text-muted-foreground text-sm font-body mb-3">10th Grade</p>
               <div className="flex items-center justify-between">
-                <span className="font-heading font-bold text-xl text-primary">{t.marks}</span>
+                <div className="flex items-center gap-1.5">
+                  <Star size={16} className="text-secondary fill-secondary" />
+                  <span className="font-heading font-bold text-2xl text-primary">{t.gpa}</span>
+                  <span className="text-muted-foreground text-sm font-body">GPA</span>
+                </div>
                 <span className="text-xs font-subheading font-medium px-3 py-1 rounded-full bg-secondary/10 text-secondary">
                   {t.badge}
                 </span>
               </div>
             </div>
-          </ScrollReveal>
+          </div>
         ))}
       </div>
     </div>
