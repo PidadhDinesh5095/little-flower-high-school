@@ -23,7 +23,7 @@ const About = () => (
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">Our Story</h2>
           <p className="text-muted-foreground font-body leading-relaxed mb-4">
-            Founded in 1998, Bright Future Academy has grown from a small institution with 200 students to one of the most prestigious schools in the region. Our journey is a testament to our unwavering commitment to academic excellence, character development, and holistic education.
+            Founded in 1998, Little flower high school has grown from a small institution with 200 students to one of the most prestigious schools in the region. Our journey is a testament to our unwavering commitment to academic excellence, character development, and holistic education.
           </p>
           <p className="text-muted-foreground font-body leading-relaxed">
             Over the past 25+ years, we have nurtured thousands of young minds who have gone on to become leaders in their respective fields. Our alumni network spans across the globe, serving in medicine, engineering, law, arts, and public service.
@@ -66,12 +66,12 @@ const About = () => (
         </ScrollReveal>
         <div className="grid md:grid-cols-2 gap-8">
           {[
-            { name: "Dr. Rajesh Kumar", role: "Headmaster", img: headmasterImg, msg: "Education is the most powerful weapon you can use to change the world. At Bright Future Academy, we wield this weapon with passion and purpose." },
-            { name: "Mr. Suresh Reddy", role: "Correspondent", img: correspondentImg, msg: "We believe every child has the potential to achieve greatness. Our role is to provide the environment and guidance for that potential to flourish." },
+            { name: "Dr. Srinivas", role: "Headmaster", img: headmasterImg, msg: "Education is the most powerful weapon you can use to change the world. At Bright Future Academy, we wield this weapon with passion and purpose." },
+            { name: "Mr. Hanmanlu", role: "Correspondent", img: correspondentImg, msg: "We believe every child has the potential to achieve greatness. Our role is to provide the environment and guidance for that potential to flourish." },
           ].map((l, i) => (
             <ScrollReveal key={l.name} delay={i * 200}>
               <div className="glass-card rounded-2xl overflow-hidden hover-lift">
-                <img src={l.img} alt={l.name} className="w-full aspect-[4/3] object-cover" loading="lazy" />
+                <img src={l.img} alt={l.name} className="w-full aspect-[4/3] object-cover object-top" loading="lazy" />
                 <div className="p-6">
                   <h3 className="font-subheading font-semibold text-xl text-foreground">{l.name}</h3>
                   <p className="text-secondary font-subheading text-sm font-medium mb-3">{l.role}</p>

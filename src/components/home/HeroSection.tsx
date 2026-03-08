@@ -7,6 +7,9 @@ const HeroSection = () => (
   <section className="relative min-h-screen flex items-center overflow-hidden">
     {/* Background */}
     <div className="absolute inset-0">
+      <div
+        className={`pointer-events-none absolute top-0 left-0 h-full w-[90%] z-5 bg-gradient-to-r from-black to-transparent`}
+      />
       <img src={heroBg} alt="Bright Future Academy Campus" className="w-full h-full object-cover" loading="eager" />
       <div className="absolute inset-0 bg-hero-gradient/80" />
       {/* Floating shapes */}
@@ -14,7 +17,7 @@ const HeroSection = () => (
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
     </div>
 
-    <div className="relative container-wide pt-20">
+    <div className="relative z-10 px-6 sm:px-12 lg:px-24 py-16">
       <div className="max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

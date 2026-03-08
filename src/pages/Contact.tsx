@@ -26,9 +26,9 @@ const Contact = () => (
 
               <div className="space-y-6">
                 {[
-                  { icon: MapPin, label: "Address", value: "123 Education Lane, Knowledge City, State 500001" },
+                  { icon: MapPin, label: "Address", value: "Q286+55G, Navipet, Telangana 503245" },
                   { icon: Phone, label: "Phone", value: "+91 98765 43210" },
-                  { icon: Mail, label: "Email", value: "info@brightfutureacademy.edu" },
+                  { icon: Mail, label: "Email", value: "info@littleflowerhighschool.edu" },
                   { icon: Clock, label: "Office Hours", value: "Mon–Sat: 8:00 AM – 4:00 PM" },
                 ].map((c) => (
                   <div key={c.label} className="flex items-start gap-4">
@@ -46,10 +46,12 @@ const Contact = () => (
               {/* Map */}
               <div className="rounded-2xl overflow-hidden border border-border h-64">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.!2d78.!3d17.!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzI0LjAiTiA3OMKwMjknMjQuMCJF!5e0!3m2!1sen!2sin!4v1"
-                  width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
-                  title="School Location"
-                />
+                  src="https://www.google.com/maps?q=LITTLE+FLOWER+HIGH+SCHOOL+NAVIPET&output=embed"
+                  className="w-full h-full border-0"
+                  loading="lazy"
+                  allowFullScreen
+                  title="Little Flower High School Navipet"
+                ></iframe>
               </div>
             </div>
           </ScrollReveal>

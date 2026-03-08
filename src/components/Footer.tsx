@@ -9,11 +9,13 @@ const Footer = () => (
         {/* Brand */}
         <div>
           <div className="flex items-center gap-3 mb-6">
-            <img src={schoolLogo} alt="Logo" className="h-14 w-14 object-contain" />
-            <div>
-              <h3 className="font-heading text-xl font-bold">Bright Future</h3>
-              <p className="text-secondary font-subheading text-sm">Academy</p>
-            </div>
+            <Link to="/" className="flex w-full items-center gap-3">
+              <img src={schoolLogo} alt="Bright Future Academy Logo" className="h-12 w-12 object-contain" />
+              <div className={`font-heading font-bold text-xl leading-tight `}>
+                Little Flower High School<br />
+
+              </div>
+            </Link>
           </div>
           <p className="text-hero-dark-foreground/70 text-sm leading-relaxed font-body">
             Empowering young minds since 1998. A premier institution dedicated to academic excellence and holistic development.
@@ -40,7 +42,7 @@ const Footer = () => (
           <ul className="space-y-4">
             <li className="flex items-start gap-3 text-sm text-hero-dark-foreground/70">
               <MapPin size={18} className="mt-0.5 text-secondary shrink-0" />
-              123 Education Lane, Knowledge City, State 500001
+              Q286+55G, Navipet, Telangana 503245
             </li>
             <li className="flex items-center gap-3 text-sm text-hero-dark-foreground/70">
               <Phone size={18} className="text-secondary shrink-0" />
@@ -48,7 +50,7 @@ const Footer = () => (
             </li>
             <li className="flex items-center gap-3 text-sm text-hero-dark-foreground/70">
               <Mail size={18} className="text-secondary shrink-0" />
-              info@brightfutureacademy.edu
+              info@littleflowerhighschool.edu
             </li>
           </ul>
         </div>
@@ -66,9 +68,7 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="mt-16 pt-8 border-t border-hero-dark-foreground/10 text-center text-sm text-hero-dark-foreground/50 font-body">
-        © {new Date().getFullYear()} Bright Future Academy. All rights reserved.
-      </div>
+      
     </div>
   </footer>
 );

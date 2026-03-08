@@ -41,12 +41,12 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBg}`}
+      className={`fixed top-0 left-0  right-0 z-50 transition-all duration-500 ${navBg}`}
     >
-      <div className="container-wide flex items-center justify-between h-20">
+      <div className="sm:px-24 flex items-center justify-between h-20">
         <Link to="/" className="flex items-center gap-3">
           <img src={schoolLogo} alt="Bright Future Academy Logo" className="h-12 w-12 object-contain" />
-          <div className={`font-heading font-bold text-lg leading-tight ${textColor}`}>
+          <div className={`font-heading font-bold text-xl leading-tight ${textColor}`}>
             Little Flower High School<br />
            
           </div>

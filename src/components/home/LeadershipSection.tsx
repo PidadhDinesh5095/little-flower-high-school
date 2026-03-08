@@ -4,13 +4,13 @@ import correspondentImg from "@/assets/correspondent.jpg";
 
 const leaders = [
   {
-    name: "Dr. Rajesh Kumar",
+    name: "Dr. Srinivas ",
     role: "Headmaster",
     img: headmasterImg,
     quote: "Our vision is to nurture disciplined, confident, and knowledgeable future leaders.",
   },
   {
-    name: "Mr. Suresh Reddy",
+    name: "Mr. Hanmanlu",
     role: "Correspondent",
     img: correspondentImg,
     quote: "We believe every child has the potential to achieve greatness with the right guidance.",
